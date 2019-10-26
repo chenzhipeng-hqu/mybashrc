@@ -136,9 +136,9 @@ alias cdui='cd code/tv-ap/dvb/ui_bby_insignia_fy19'
 alias MakeToUdisk='make ; sudo mount /dev/sdc1 /mnt/hgfs/ ; cp -p bin/*bin /mnt/hgfs/ ; ll /mnt/hgfs/ | grep *bin ; sudo umount /mnt/hgfs ; echo please plug your Udisk'
 alias MvToUdisk=' sudo mount /dev/sdc1 /mnt/hgfs/ ; cp -p bin/*bin /mnt/hgfs/ ; ll /mnt/hgfs/ | grep *bin ; sudo umount /mnt/hgfs ; echo please plug your Udisk'
 
-alias gcc="color_compile gcc"
-alias g++="color_compile g++"
-alias make="color_compile make"
+#alias gcc="color_compile gcc"
+#alias g++="color_compile g++"
+#alias make="color_compile make"
 
 # some more git  aliases
 alias gitpushtrunk='git push origin trunk:trunk'
@@ -236,7 +236,26 @@ function cdx()
 }
 ######################## end #################
 
+######################## com #################
+com() 
+{
+    ports_USB=$(ls /dev/ttyUSB*)
+    ports_ACM=$(ls /dev/ttyACM*)
+    ports="$ports_USB $ports_ACM"
+    select port in $ports;do
+        if [ "$port" ]; then
+            echo "You select the choice '$port'"
+            minicom -D "$port" "$@"
+            break
+        else
+            echo "Invaild selection"
+        fi
+    done
+}
+######################## end #################
+
 #export
+export PATH=$HOME/bin:$PATH
 export GTEST_DIR="/home/user/code/gtest/googletest-master/googletest"
 export PYTHONSTARTUP=~/.pystartup
 export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
