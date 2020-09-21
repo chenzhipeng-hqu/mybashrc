@@ -153,6 +153,7 @@ alias gitpulllg='git pull origin lg:lg'
 # some more source aliases
 alias sourcevim='source ~/.vimrc'
 alias sourcebashrc='source ~/.bashrc'
+alias stm32cli='stm32cli -c port=swd freq=3900'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
