@@ -125,14 +125,10 @@ alias cd3='cd ../..'
 alias cd4='cd ../../..'
 alias cd5='cd ../../../..'
 alias cdmakebin='cd /home/user/code/autoMakeBin'
-alias cdnuwa='cd /home/user/code/nuwa'
 #alias vims='sed -i '/^set background=/d' Session.vim ; vim -S Session.vim '
 alias vims='sed -i '/background=/d' Session.vim ; vim -S Session.vim '
-alias cdr01='cd ~/code/MSD3553/r01'
-alias cdinsignia='cd ~/code/MSD3553/insignia'
 alias repostatus='repo status'
 alias mypython='~/bin/python'
-alias cdui='cd code/tv-ap/dvb/ui_bby_insignia_fy19'
 alias MakeToUdisk='make ; sudo mount /dev/sdc1 /mnt/hgfs/ ; cp -p bin/*bin /mnt/hgfs/ ; ll /mnt/hgfs/ | grep *bin ; sudo umount /mnt/hgfs ; echo please plug your Udisk'
 alias MvToUdisk=' sudo mount /dev/sdc1 /mnt/hgfs/ ; cp -p bin/*bin /mnt/hgfs/ ; ll /mnt/hgfs/ | grep *bin ; sudo umount /mnt/hgfs ; echo please plug your Udisk'
 
@@ -141,14 +137,8 @@ alias MvToUdisk=' sudo mount /dev/sdc1 /mnt/hgfs/ ; cp -p bin/*bin /mnt/hgfs/ ; 
 #alias make="color_compile make"
 
 # some more git  aliases
-alias gitpushtrunk='git push origin trunk:trunk'
-alias gitpulltrunk='git pull origin trunk:trunk'
-
-alias gitpushtcl='git push origin tcl:tcl'
-alias gitpulltcl='git pull origin tcl:tcl'
-
-alias gitpushlg='git push origin lg:lg'
-alias gitpulllg='git pull origin lg:lg'
+#alias gitpushtrunk='git push origin trunk:trunk'
+#alias gitpulltrunk='git pull origin trunk:trunk'
 
 # some more source aliases
 alias sourcevim='source ~/.vimrc'
